@@ -3,6 +3,7 @@
 
 # IDE settings
 *.vscode
+.vscode/
 
 # Log file
 *.log
