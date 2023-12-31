@@ -3,27 +3,28 @@ package Classes;
 import java.util.ArrayList;
 import java.util.List;
 
+import Interfaces.iActorBehavior;
 import Interfaces.iMarketBehavior;
 import Interfaces.iQueueBehavior;
 
 public class Market implements iMarketBehavior,iQueueBehavior {
 
-private List<Actor> queue;
+private List<iActorBehavior> queue;
 
     public Market() {
-        this.queue = new ArrayList<Actor>();
+        this.queue = new ArrayList<iActorBehavior>();
     }
 
     @Override
-    public void acceptToMarket(Actor actor) {
-        System.out.println(actor.getName() + " клиент пришел в магазин ");
+    public void acceptToMarket(iActorBehavior actor) {
+        System.out.println(actor.getActor().getName() + " клиент пришел в магазин ");
         takeInQueue(actor);
     }
 
     @Override
-    public void takeInQueue(Actor actor) {
+    public void takeInQueue(iActorBehavior actor) {
         this.queue.add(actor);
-        System.out.println(actor.getName() + " клиент добавлен в очередь ");
+        System.out.println(actor.getActor().getName() + " клиент добавлен в очередь ");
     }
 
     @Override
@@ -44,10 +45,10 @@ private List<Actor> queue;
 
     @Override
     public void giveOrder() {
-        for (Actor actor : queue) {
+        for (iActorBehavior actor : queue) {
             if (actor.isMakeOrder()) {
                 actor.setTakeOrder(true);
-                System.out.println(actor.getName() + " клиент получил свой заказ ");
+                System.out.println(actor.getActor().getName() + " клиент получил свой заказ ");
             }
         }
     }
@@ -55,10 +56,10 @@ private List<Actor> queue;
     @Override
     public void releaseFromQueue() {
         List<Actor> releaseActors = new ArrayList<>();
-        for (Actor actor : queue) {
+        for (iActorBehavior actor : queue) {
             if (actor.isTakeOrder()) {
-                releaseActors.add(actor);
-                System.out.println(actor.getName() + " клиент ушел из очереди ");
+                releaseActors.add(actor.getActor());
+                System.out.println(actor.getActor().getName() + " клиент ушел из очереди ");
             }
         }
         releseFromMarket(releaseActors);
@@ -66,10 +67,10 @@ private List<Actor> queue;
 
     @Override
     public void takeOrder() {
-        for (Actor actor : queue) {
+        for (iActorBehavior actor : queue) {
             if (!actor.isMakeOrder()) {
                 actor.setMakeOrder(true);
-                System.out.println(actor.getName() + " клиент сделал заказ ");
+                System.out.println(actor.getActor().getName() + " клиент сделал заказ ");
             }
         }
     }

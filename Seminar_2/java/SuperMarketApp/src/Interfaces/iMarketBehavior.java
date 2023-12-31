@@ -6,7 +6,7 @@ import Classes.Actor;
 
 public interface iMarketBehavior {
 
-    public void acceptToMarket(Actor actor);
+    public void acceptToMarket(iActorBehavior actor);
     public void releseFromMarket(List<Actor> actors);
     public void update();
 
