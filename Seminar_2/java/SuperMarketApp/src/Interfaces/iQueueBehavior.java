@@ -1,7 +1,5 @@
 package Interfaces;
 
-import Classes.Actor;
-
 public interface iQueueBehavior {
 
     public void takeInQueue(iActorBehavior actor);
