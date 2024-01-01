@@ -8,6 +8,7 @@ public interface iMarketBehavior {
 
     public void acceptToMarket(iActorBehavior actor);
     public void releseFromMarket(List<Actor> actors);
+    public void inspectGoods();
     public void update();
 
 }

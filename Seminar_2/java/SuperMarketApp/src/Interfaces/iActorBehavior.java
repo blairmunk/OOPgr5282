@@ -1,8 +1,8 @@
 package Interfaces;
+// Interface for client behavior
 
 import Classes.Actor;
 
-// Interface for client behavior
 public interface iActorBehavior {
 
     public boolean isTakeOrder();

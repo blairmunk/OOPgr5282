@@ -2,6 +2,7 @@ package Classes;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import Interfaces.iActorBehavior;
 import Interfaces.iMarketBehavior;
@@ -75,4 +76,18 @@ private List<iActorBehavior> queue;
         }
     }
 
+    @Override
+    public void inspectGoods() {
+        Random random = new Random();
+        for (iActorBehavior actor : queue) {
+            if (random.nextBoolean()) {
+                ((RefundClient) actor).setGetRefund(true);
+                System.out.println(actor.getActor().getName() + " клиент получил возврат ");
+            }
+            else {
+                ((RefundClient) actor).setGetReject(true);
+                System.out.println(actor.getActor().getName() + " клиент получил отказ в возврате товара ");
+            }
+        }
+    }
 }
