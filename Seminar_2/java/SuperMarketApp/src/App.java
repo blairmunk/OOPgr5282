@@ -1,3 +1,9 @@
+/**
+ * Название: SuperMarketApp
+ * @version: 1.1
+ * Назначение: Смоделировать работу супермаркета (покупки и возврата товаров) с целью изучения принципов ООП
+ */
+
 import Classes.Market;
 import Classes.OrdinaryClient;
 import Classes.PromoClient;

@@ -2,6 +2,10 @@ package Classes;
 
 import Interfaces.iReturnOrder;
 
+/**
+ * Это класс для клиентов, которые возвращают товар. Реализует поведение iReturnOrder. 
+ * Также реализует поведение обычных клиентов
+ */
 public class RefundClient extends Actor implements iReturnOrder {
 
     // For return order
