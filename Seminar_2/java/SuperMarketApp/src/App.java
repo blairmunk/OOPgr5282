@@ -1,5 +1,6 @@
 import Classes.Market;
 import Classes.OrdinaryClient;
+import Classes.PromoClient;
 import Classes.SpecialClient;
 import Classes.TaxInspector;
 import Interfaces.iActorBehavior;
@@ -12,11 +13,13 @@ public class App {
         iActorBehavior client2 = new OrdinaryClient("Maria");
         iActorBehavior client3 = new SpecialClient("Gubernator", 1);
         iActorBehavior client4 = new TaxInspector();
+        iActorBehavior client5 = new PromoClient("Vasya", "newyear", 1);
 
         magnit.acceptToMarket(client1);
         magnit.acceptToMarket(client2);
         magnit.acceptToMarket(client3);
         magnit.acceptToMarket(client4);
+        magnit.acceptToMarket(client5);
 
         magnit.update();
 
