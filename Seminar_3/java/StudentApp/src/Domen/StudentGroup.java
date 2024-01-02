@@ -32,7 +32,7 @@ public class StudentGroup implements Iterable<Student> {
 
     @Override
     public String toString() {
-        return "StudentGroup " + this.idGroup;
+        return "StudentGroup " + this.idGroup + " numberOfStudents " + group.size();
     }
 
     @Override
