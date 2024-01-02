@@ -5,7 +5,7 @@ import java.util.List;
 
 import Service.StudentIterator;
 
-public class StudentGroup implements Iterable<Student> {
+public class StudentGroup implements Iterable<Student>, Comparable<StudentGroup> {
     private List<Student>  group;
     private int idGroup;
     
@@ -39,5 +39,13 @@ public class StudentGroup implements Iterable<Student> {
     public Iterator<Student> iterator() {
         return new StudentIterator(group);
     }
+
+    @Override
+    public int compareTo(StudentGroup arg0) {
+        if (this.group.size() > arg0.group.size()) return 1;
+        if (this.group.size() < arg0.group.size()) return -1;
+        return 0;
+    }
+    
     
 }

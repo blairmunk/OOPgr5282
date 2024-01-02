@@ -49,7 +49,7 @@ public class App {
         // Распределяем списки студентов по группам
         StudentGroup studentGroup1 = new StudentGroup(studList1, 5282);
         StudentGroup studentGroup2 = new StudentGroup(studList2, 5283);
-        StudentGroup studentGroup3 = new StudentGroup(studList3, 5283);
+        StudentGroup studentGroup3 = new StudentGroup(studList3, 5284);
 
         // Созадём список из групп
         List<StudentGroup> groupList1 = new ArrayList<>();
@@ -83,14 +83,19 @@ public class App {
             for (Student student : studGroup){
                 System.out.println(student);
             }
+            System.out.println();
         }
         
-    //     Collections.sort(studentGroup1.getGroup());
+        Collections.sort(studentSteam1.getSteam());
         
-    //     System.out.println("\nSorted setam");
+        System.out.println("\nSorted setam");
         
-    //     for (StudentGroup studGroup : studentSteam1){
-    //         System.out.println(studGroup);
-    //  }
+        for (StudentGroup studGroup : studentSteam1){
+            System.out.println(studGroup + ":");
+            for (Student student : studGroup){
+                System.out.println(student);
+            }
+            System.out.println();
+        }
     }
 }
