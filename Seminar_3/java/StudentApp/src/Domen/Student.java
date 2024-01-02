@@ -1,6 +1,6 @@
 package Domen;
 
-public class Student extends Person {
+public class Student extends Person implements Comparable<Student>{
     private int id;
     private static int generalId;
     
@@ -20,7 +20,17 @@ public class Student extends Person {
 
     @Override
     public String toString() {
-        return super.toString() + "\n id " + this.id;
+        return super.toString() + " id " + this.id;
+    }
+
+    @Override
+    public int compareTo(Student arg0) {
+        System.out.println(super.getName() + " - " + arg0.getName());
+        if (super.getAge() > arg0.getAge()) return 1;
+        if (super.getAge() < arg0.getAge()) return -1;
+        if (this.id > arg0.id) return 1;
+        if (this.id < arg0.id) return -1;
+        return 0;
     }
     
 }
