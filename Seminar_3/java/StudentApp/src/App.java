@@ -1,3 +1,10 @@
+/**
+ * Название: StudentApp
+ * @version: 1.1
+ * Назначение: Представить модель организации учебных групп в учебном заведении,
+ * потренироваться в использовании встроенных интерфейсов java.
+ */
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -51,33 +58,17 @@ public class App {
         StudentGroup studentGroup2 = new StudentGroup(studList2, 5283);
         StudentGroup studentGroup3 = new StudentGroup(studList3, 5284);
 
-        // Созадём список из групп
+        // Создаём первый список из групп
         List<StudentGroup> groupList1 = new ArrayList<>();
         groupList1.add(studentGroup1);
         groupList1.add(studentGroup2); 
         groupList1.add(studentGroup3); 
         
-        // Назначаем список групп в поток
+        // Распеределяем списки групп по потокам
         StudentSteam studentSteam1 = new StudentSteam(groupList1, 2023);
         
-        // System.out.println(studentGroup1);
-
-        // System.out.println("Unsorted group");
-
-        // for (Student student : studentGroup1){
-        //     System.out.println(student);
-        // }
-        
-        // Collections.sort(studentGroup1.getGroup());
-        
-        // System.out.println("\nSorted group");
-        
-        // for (Student student : studentGroup1){
-        //     System.out.println(student);
-        // }
-        
+        // Print unsorted steam
         System.out.println("Unsorted steam");
-
         for (StudentGroup studGroup : studentSteam1){
             System.out.println(studGroup + ":");
             for (Student student : studGroup){
@@ -86,10 +77,11 @@ public class App {
             System.out.println();
         }
         
+        // Sorting steam by size of groups using comparator
         Collections.sort(studentSteam1.getSteam());
         
+        // Print sorted steam
         System.out.println("\nSorted setam");
-        
         for (StudentGroup studGroup : studentSteam1){
             System.out.println(studGroup + ":");
             for (Student student : studGroup){
@@ -97,5 +89,6 @@ public class App {
             }
             System.out.println();
         }
+
     }
 }
