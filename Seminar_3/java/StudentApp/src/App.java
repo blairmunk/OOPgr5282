@@ -78,28 +78,30 @@ public class App {
         // Распеределяем списки групп по потокам
         StudentSteam studentSteam1 = new StudentSteam(groupList1, 2023);
         
-        // Print unsorted steam
-        System.out.println("Unsorted steam");
-        for (StudentGroup studGroup : studentSteam1){
-            System.out.println(studGroup + ":");
-            for (Student student : studGroup){
-                System.out.println(student);
-            }
-            System.out.println();
-        }
+        // // Print unsorted steam
+        // System.out.println("Unsorted steam");
+        // for (StudentGroup studGroup : studentSteam1){
+        //     System.out.println(studGroup + ":");
+        //     for (Student student : studGroup){
+        //         System.out.println(student);
+        //     }
+        //     System.out.println();
+        // }
         
-        // Sorting steam by size of groups using comparator
-        Collections.sort(studentSteam1.getSteam());
+        // // Sorting steam by size of groups using comparator
+        // Collections.sort(studentSteam1.getSteam());
         
-        // Print sorted steam
-        System.out.println("\nSorted setam");
-        for (StudentGroup studGroup : studentSteam1){
-            System.out.println(studGroup + ":");
-            for (Student student : studGroup){
-                System.out.println(student);
-            }
-            System.out.println();
-        }
+        // // Print sorted steam
+        // System.out.println("\nSorted steam");
+        // for (StudentGroup studGroup : studentSteam1){
+        //     System.out.println(studGroup + ":");
+        //     for (Student student : studGroup){
+        //         System.out.println(student);
+        //     }
+        //     System.out.println();
+        // }
+
+        System.out.println(studentGroup1);
 
     }
 }
