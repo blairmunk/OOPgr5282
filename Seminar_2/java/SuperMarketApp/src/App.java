@@ -15,15 +15,20 @@ import Interfaces.iActorBehavior;
 public class App {
     public static void main(String[] args) throws Exception {
         
+        // Init new supermarket
         Market magnit = new Market();
+
+        // Adding new clients
         iActorBehavior client1 = new OrdinaryClient("Boris");
         iActorBehavior client2 = new PromoClient("Vasya", "newyear" , 1);
         iActorBehavior client3 = new RefundClient("Petr");
 
+        // Clients enter to market
         magnit.acceptToMarket(client1);
         magnit.acceptToMarket(client2);
         magnit.acceptToMarket(client3);
 
+        // Clients get services
         magnit.update();
 
     }

@@ -18,7 +18,7 @@ public interface iActorBehavior {
     public void setTakeOrder(boolean val);
     /** Поменять состояние isMakeOrder*/
     public void setMakeOrder(boolean val);
-    /** Вернуться к сущности клиента*/
+    /** Вернуть имя клиента как родителя (Actor)*/
     public Actor getActor();
 
 }
