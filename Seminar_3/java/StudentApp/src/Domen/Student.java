@@ -1,9 +1,16 @@
 package Domen;
 
+/**
+  * Класс студента
+  */
 public class Student extends Person implements Comparable<Student>{
     private int id;
-    private static int generalId;
+    private static int generalId; //< Счётчик id, используется для генерации id студентов
     
+    /**
+     * Конструктор студентов
+     * @param id — идент. номер, генерируется автоматически при создании нового студента
+     */
     public Student(String name, int age) {
         super(name, age);
         this.id = generalId;
@@ -23,6 +30,7 @@ public class Student extends Person implements Comparable<Student>{
         return super.toString() + " id " + this.id;
     }
 
+    /** Реализация компаратора сначала по возрасту студентов, затем по номеру id*/
     @Override
     public int compareTo(Student arg0) {
         System.out.println(super.getName() + " - " + arg0.getName());

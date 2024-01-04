@@ -5,10 +5,17 @@ import java.util.List;
 
 import Service.GroupIterator;
 
+/**
+  * Класс потока студентов, состоит из студенческих групп
+  */
 public class StudentSteam implements Iterable<StudentGroup>{
     private List<StudentGroup>  steam;
     private int idSteam;
     
+    /** Конструктор потока
+     * @param steam — имя потока
+     * @param idSteam ­— идентификатор потока
+     */
     public StudentSteam(List<StudentGroup> steam, int idSteam) {
         this.steam = steam;
         this.idSteam = idSteam;
@@ -35,6 +42,7 @@ public class StudentSteam implements Iterable<StudentGroup>{
         return "StudentSteam " + this.idSteam;
     }
 
+    /** Итератор для перечисления групп */
     @Override
     public Iterator<StudentGroup> iterator() {
         return new GroupIterator(steam);

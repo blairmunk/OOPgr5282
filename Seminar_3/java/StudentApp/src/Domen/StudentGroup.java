@@ -48,11 +48,13 @@ public class StudentGroup implements Iterable<Student>, Comparable<StudentGroup>
         return new StudentIterator(group);
     }
 
-    /** Реализация компаратора по размеру группы*/
+    /** Реализация компаратора по размеру группы, затем по идентификатору группы*/
     @Override
     public int compareTo(StudentGroup arg0) {
         if (this.group.size() > arg0.group.size()) return 1;
         if (this.group.size() < arg0.group.size()) return -1;
+        if (this.idGroup > arg0.idGroup) return 1;
+        if (this.idGroup < arg0.idGroup) return -1;
         return 0;
     }
     

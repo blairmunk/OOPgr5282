@@ -5,6 +5,7 @@ import java.util.List;
 
 import Domen.StudentGroup;
 
+/** Итератор для перечисления студенческих групп */
 public class GroupIterator implements Iterator<StudentGroup>{
     private int count;
     private final List<StudentGroup> list;

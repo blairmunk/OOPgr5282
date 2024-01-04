@@ -1,9 +1,18 @@
 package Domen;
 
+
+/**
+  * Класс персоны, используется как родитель для других сущностей
+  */
 public class Person {
     private String name;
     private int age;
     
+    /**
+     * Конструктор персоны
+     * @param name — Имя
+     * @param age — Возраст
+     */
     public Person(String name, int age) {
         this.name = name;
         this.age = age;

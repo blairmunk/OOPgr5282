@@ -29,6 +29,9 @@ public class App {
         Student student12 = new Student("Roman", 21);
         Student student13 = new Student("Ekaterina", 20);
         Student student14 = new Student("Alexey", 20);
+        Student student15 = new Student("Dmitriy", 21);
+        Student student16 = new Student("Alevtina", 21);
+        Student student17 = new Student("Konstantin", 19);
 
         // Заполняем первый список студентами
         List<Student> studList1 = new ArrayList<>();
@@ -53,16 +56,24 @@ public class App {
         studList3.add(student13);
         studList3.add(student14);
 
+        // Заполняем четвёртый список студентами
+        List<Student> studList4 = new ArrayList<>();
+        studList4.add(student15);
+        studList4.add(student16);
+        studList4.add(student17);
+
         // Распределяем списки студентов по группам
         StudentGroup studentGroup1 = new StudentGroup(studList1, 5282);
         StudentGroup studentGroup2 = new StudentGroup(studList2, 5283);
         StudentGroup studentGroup3 = new StudentGroup(studList3, 5284);
+        StudentGroup studentGroup4 = new StudentGroup(studList4, 5285);
 
         // Создаём первый список из групп
         List<StudentGroup> groupList1 = new ArrayList<>();
         groupList1.add(studentGroup1);
         groupList1.add(studentGroup2); 
-        groupList1.add(studentGroup3); 
+        groupList1.add(studentGroup3);
+        groupList1.add(studentGroup4); 
         
         // Распеределяем списки групп по потокам
         StudentSteam studentSteam1 = new StudentSteam(groupList1, 2023);

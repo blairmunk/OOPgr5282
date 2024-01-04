@@ -5,6 +5,7 @@ import java.util.List;
 
 import Domen.Student;
 
+/** Итератор для перечисления студентов */
 public class StudentIterator implements Iterator<Student> {
     private int count;
     private final List<Student> list;
