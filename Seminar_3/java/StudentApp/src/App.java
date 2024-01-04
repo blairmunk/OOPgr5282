@@ -78,30 +78,40 @@ public class App {
         // Распеределяем списки групп по потокам
         StudentSteam studentSteam1 = new StudentSteam(groupList1, 2023);
         
-        // // Print unsorted steam
-        // System.out.println("Unsorted steam");
-        // for (StudentGroup studGroup : studentSteam1){
-        //     System.out.println(studGroup + ":");
-        //     for (Student student : studGroup){
-        //         System.out.println(student);
-        //     }
-        //     System.out.println();
-        // }
-        
-        // // Sorting steam by size of groups using comparator
-        // Collections.sort(studentSteam1.getSteam());
-        
-        // // Print sorted steam
-        // System.out.println("\nSorted steam");
-        // for (StudentGroup studGroup : studentSteam1){
-        //     System.out.println(studGroup + ":");
-        //     for (Student student : studGroup){
-        //         System.out.println(student);
-        //     }
-        //     System.out.println();
-        // }
 
+//////////////////// Вывод на консоль по заданиям №1, №2 и №3 (без звёздочки),
+//////////////////// и №1 (со звёздочкой) //// 
+
+        // Print unsorted steam
+        System.out.println("Unsorted steam");
+        for (StudentGroup studGroup : studentSteam1){
+            System.out.println("Группа " + studGroup.getIdGroup() + ":");
+            for (Student student : studGroup){
+                System.out.println(student);
+            }
+            System.out.println();
+        }
+        
+        // Sorting steam by size of groups and then by idGroup using comparator
+        Collections.sort(studentSteam1.getSteam());
+        
+        // Print sorted steam
+        System.out.println("Sorted steam");
+        for (StudentGroup studGroup : studentSteam1){
+            System.out.println("Группа " + studGroup.getIdGroup() + ":");
+            for (Student student : studGroup){
+                System.out.println(student);
+            }
+            System.out.println();
+        }
+
+//////////////////// Вывод на консоль по заданию №2 со звёздочкой //////////
+
+        // Работа реализации ToString для вывода списка студентов:
         System.out.println(studentGroup1);
+        
+        // Работа реализации ToString для вывода списка студентов с указанием группы для каждого
+        System.out.println(studentSteam1);
 
     }
 }

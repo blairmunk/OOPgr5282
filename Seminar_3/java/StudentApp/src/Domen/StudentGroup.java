@@ -10,7 +10,7 @@ import Service.StudentIterator;
   */
 public class StudentGroup implements Iterable<Student>, Comparable<StudentGroup> {
     private List<Student> group;
-    private int idGroup;
+    int idGroup;
     
     /** Конструктор группы студентов
      * @param group — имя группы
@@ -37,10 +37,11 @@ public class StudentGroup implements Iterable<Student>, Comparable<StudentGroup>
         this.idGroup = idGroup;
     }
 
+    /** Выводим данные по группе (id, кол-во студентов) и список самих студентов */
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder();
-        result.append("StudentGroup " + this.idGroup + " numberOfStudents " + group.size()).append("\n");
+        result.append("StudentGroup " + this.idGroup + " numberOfStudents " + group.size() + ":").append("\n");
         for (Student student : this.group) {
             result.append(student.toString()).append("\n");
         }

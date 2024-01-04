@@ -37,9 +37,19 @@ public class StudentSteam implements Iterable<StudentGroup>{
         this.idSteam = idSteam;
     }
 
+    /** Выводим данные по потоку (id, кол-во групп) 
+     * и список всех студентов потока с указанием номера группы 
+     */
     @Override
     public String toString() {
-        return "StudentSteam " + this.idSteam;
+        StringBuilder result = new StringBuilder();
+        result.append("StudentSteam " + this.idSteam + ", numberOfGroups " + steam.size() + ":").append("\n");
+        for (StudentGroup studGroup : this.steam) {
+            for (Student student : studGroup) {
+                result.append(student.toString()).append(" (group " + studGroup.idGroup + ")").append("\n");
+            }
+        }
+        return result.toString();
     }
 
     /** Итератор для перечисления групп */
