@@ -10,6 +10,7 @@ import java.util.List;
 public interface iPersonService<T> {
     public List<T> getAll();
 
+    // Creating person method
     public void create(String name, int age);
         
 }
