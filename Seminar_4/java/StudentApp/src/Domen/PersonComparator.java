@@ -2,6 +2,9 @@ package Domen;
 
 import java.util.Comparator;
 
+/*
+ * General class for comparing persons
+*/
 public class PersonComparator<T extends Person> implements Comparator<T> {
 
     @Override
