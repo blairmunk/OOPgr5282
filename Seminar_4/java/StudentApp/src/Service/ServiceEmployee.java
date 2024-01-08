@@ -5,7 +5,6 @@ import java.util.List;
 
 import Domen.Employee;
 import Domen.PersonComparator;
-import Domen.Student;
 
 public class ServiceEmployee implements iPersonService<Employee> {
     private int count;

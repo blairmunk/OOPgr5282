@@ -14,5 +14,15 @@ public class Teacher extends Person{
         super(name, age);
         this.academicDegree = academicDegree;
     }
+
+    public String getAcademicDegree() {
+      return academicDegree;
+    }
+
+    public void setAcademicDegree(String academicDegree) {
+      this.academicDegree = academicDegree;
+    }
+    
+
     
 }

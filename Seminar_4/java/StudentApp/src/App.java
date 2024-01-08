@@ -12,25 +12,56 @@ import java.util.List;
 
 import Controller.AccountController;
 import Domen.*;
+import Service.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        // Создаём учителей
-        Teacher teacher1 = new Teacher("Alexey", 31, "dotsent");
-        Teacher teacher2 = new Teacher("Vasiliy", 28, "dotsent");
+        
+        ///////// Task#1. Printing sorted teachers /////
 
-        // Сравниваем учителей
-        System.out.println(new PersonComparator<Teacher>().compare(teacher1, teacher2));
+        // Creating teachers
+        TeacherService teachers1 = new TeacherService();
+        teachers1.create("Vasiliy", 32);
+        teachers1.create("Viktor", 31);
+        teachers1.create("Anna", 27);
 
-        // Создаём студентов
-        Student student1 = new Student("Michael", 31);
-        Student student2 = new Student("Arkadiy", 28);
+        // Printing list of teachers
+        System.out.println(teachers1.getAll());
 
-        // Сравниваем студентов
-        System.out.println(new PersonComparator<Student>().compare(student1, student2));
+        // Printing teachers sorted by name
+        teachers1.printSortedPersons();
 
+        
         // Выплачиваем зарплату
-        new AccountController().paySalary(teacher1, 50000);
+        // new AccountController().paySalary(teacher1, 50000);
+
+        ///////// Task#2. Average age for group of persons /////
+        // Creating persons
+        Person person1 = new Student("Oleg", 20);
+        Person person2 = new Student("Roman", 22);
+        Person person3 = new Student("Oksana", 20);
+        Person person4 = new Student("Ekaterina", 21);
+        Person person5 = new Teacher("Alexey", 30, "Dotsent");
+
+
+        // Add persons to list
+        List<Person> personList1 = new ArrayList<>();
+        personList1.add(person1);
+        personList1.add(person2);
+        personList1.add(person3);
+        personList1.add(person4);
+        personList1.add(person5);
+        
+        // Calculating average age
+        double averageAge1 = AccountController.averageAge(personList1);
+        
+        // Printing results
+        System.out.println("Средний возраст этой группы:\n" + averageAge1);
+
+
+
 
     }
+
+
 }
