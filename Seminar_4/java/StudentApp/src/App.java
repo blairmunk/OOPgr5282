@@ -31,10 +31,6 @@ public class App {
         // Printing teachers sorted by name
         teachers1.printSortedPersons();
 
-        
-        // Выплачиваем зарплату
-        // new AccountController().paySalary(teacher1, 50000);
-
         ///////// Task#2. Average age for group of persons /////
         // Creating persons
         Person person1 = new Student("Oleg", 20);
