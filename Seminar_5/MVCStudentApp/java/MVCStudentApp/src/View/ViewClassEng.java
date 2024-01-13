@@ -19,11 +19,11 @@ public class ViewClassEng implements iGetView{
     }
 
     @Override
-    public String prompt(String msg) {
-        try (Scanner in = new Scanner(System.in)) {
-            System.out.println(msg);
-            return in.nextLine();
-        }
+    public String prompt(String msg){
+        Scanner in = new Scanner(System.in);
+        System.out.println(msg);
+        return in.nextLine();
+        
     }
 
 }

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import Controller.ControllerClass;
@@ -6,6 +7,7 @@ import Controller.Interfaces.iGetModel;
 import Controller.Interfaces.iGetView;
 import Model.ModelClass;
 import Model.ModelClassFile;
+import Model.ModelClassHash;
 import Model.Domain.Student;
 import View.ViewClass;
 import View.ViewClassEng;
@@ -35,13 +37,29 @@ public class App {
         studList1.add(student9);
         studList1.add(student10);
 
-        iGetModel modelFile = new ModelClassFile("StudentDB.csv");
+        // Creating hashmap of students
+        HashMap<Integer, Student> studentMap = new HashMap<>();
+        studentMap.put(1, new Student("Иванов", 20));
+        studentMap.put(2, new Student("Петров", 19));
+        studentMap.put(3, new Student("Сидоров", 22));
+        studentMap.put(4, new Student("Алешин", 23));
+        studentMap.put(5, new Student("Александров", 23));
+        studentMap.put(6, new Student("Егорова", 20));
+        studentMap.put(7, new Student("Ползунова", 22));
+        studentMap.put(8, new Student("Асташкина", 22));
+        studentMap.put(9, new Student("Семенова", 21));
+        studentMap.put(10, new Student("Петренко", 21));
+
+        // iGetModel modelFile = new ModelClassFile("StudentDB.csv");
         // modelFile.saveAllStudentsToFile(studList1);
 
         // iGetModel model = new ModelClass(studList1);
+
+        iGetModel modelHash = new ModelClassHash(studentMap);
+        
         iGetView view = new ViewClassEng();
 
-        ControllerClass controller = new ControllerClass(modelFile, view);
+        ControllerClass controller = new ControllerClass(modelHash, view);
 
         // controller.update();
         controller.run();
