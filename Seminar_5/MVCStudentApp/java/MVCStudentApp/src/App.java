@@ -12,16 +12,16 @@ import View.ViewClassEng;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Student student1 = new Student("Ivan", 21);
-        Student student2 = new Student("Vasya", 21);
-        Student student3 = new Student("Julia", 21);
-        Student student4 = new Student("Anastasia", 21);
-        Student student5 = new Student("Alexander", 21);
-        Student student6 = new Student("Gleb", 21);
+        Student student1 = new Student("Ivan", 20);
+        Student student2 = new Student("Vasya", 19);
+        Student student3 = new Student("Julia", 23);
+        Student student4 = new Student("Anastasia", 24);
+        Student student5 = new Student("Alexander", 22);
+        Student student6 = new Student("Gleb", 22);
         Student student7 = new Student("Konstantin", 21);
         Student student8 = new Student("Irina", 21);
         Student student9 = new Student("Katerina", 21);
-        Student student10 = new Student("Vladimir", 21);
+        Student student10 = new Student("Vladimir", 20);
 
         List<Student> studList1 = new ArrayList<>();
         studList1.add(student1);
