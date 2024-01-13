@@ -5,9 +5,8 @@ import java.util.List;
 
 import Controller.Interfaces.iGetModel;
 import Controller.Interfaces.iGetView;
-import Model.ModelClass;
 import Model.Domain.Student;
-import View.ViewClass;
+
 
 public class ControllerClass {
     
@@ -69,6 +68,9 @@ public class ControllerClass {
             
                 case LIST:
                     view.printAllStudents(model.getStudents());
+                    break;
+                
+                default:
                     break;
             }
         }

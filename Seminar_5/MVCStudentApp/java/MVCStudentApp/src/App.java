@@ -8,6 +8,7 @@ import Model.ModelClass;
 import Model.ModelClassFile;
 import Model.Domain.Student;
 import View.ViewClass;
+import View.ViewClassEng;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -38,7 +39,7 @@ public class App {
         // modelFile.saveAllStudentsToFile(studList1);
 
         // iGetModel model = new ModelClass(studList1);
-        iGetView view = new ViewClass();
+        iGetView view = new ViewClassEng();
 
         ControllerClass controller = new ControllerClass(modelFile, view);
 
