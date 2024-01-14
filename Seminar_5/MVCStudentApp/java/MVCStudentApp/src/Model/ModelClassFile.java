@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import Controller.Interfaces.iGetModel;
@@ -62,6 +63,22 @@ public class ModelClassFile implements iGetModel {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+    }
+
+
+
+
+    
+    public void deleteStudent(int id) {
+        Iterator<Student> iterator = getStudents().iterator();
+        while (iterator.hasNext()) {
+            if (iterator.next().getId() == id) {
+                iterator.remove();
+                System.out.println("Студент с id " + id + " удалён из списка");
+                return;
+            }
+        }
+        System.out.println("Студент с id " + id + " не найден в списке.");
     }
     
 }

@@ -2,6 +2,7 @@ package Controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import Controller.Interfaces.iGetModel;
 import Controller.Interfaces.iGetView;
@@ -69,6 +70,13 @@ public class ControllerClass {
                 case LIST:
                     view.printAllStudents(model.getStudents());
                     break;
+
+                case DELETE:
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.println("Введите id студента:");
+                    int id = scanner.nextInt();
+                    model.deleteStudent(id);
+                    break;   
                 
                 default:
                     break;

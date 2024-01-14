@@ -7,6 +7,7 @@ import Model.Domain.Student;
 public interface iGetModel {
 
     public List<Student> getStudents();
-    
+
+    public void deleteStudent(int id);
 
 }
