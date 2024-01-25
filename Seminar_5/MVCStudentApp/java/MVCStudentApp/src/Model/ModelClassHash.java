@@ -9,6 +9,9 @@ import java.util.Map;
 import Controller.Interfaces.iGetModel;
 import Model.Domain.Student;
 
+/**
+ * Модель данных с хеш-таблицей студентов
+ */
 public class ModelClassHash implements iGetModel {
 
     private HashMap<Integer, Student> studentsMap;

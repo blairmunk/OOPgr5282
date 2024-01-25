@@ -6,6 +6,7 @@ import java.util.Scanner;
 import Controller.Interfaces.iGetView;
 import Model.Domain.Student;
 
+// Реализация предствления списка студентов на русском языке
 public class ViewClass implements iGetView{
 
     public void printAllStudents(List<Student> students) {

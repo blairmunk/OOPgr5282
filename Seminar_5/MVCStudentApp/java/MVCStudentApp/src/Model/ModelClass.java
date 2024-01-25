@@ -7,6 +7,9 @@ import java.util.Iterator;
 import Controller.Interfaces.iGetModel;
 import Model.Domain.Student;
 
+/**
+ * Модель данных студентов, студенты добавляеются вручную
+ */
 public class ModelClass implements iGetModel {
 
     private List<Student> students;

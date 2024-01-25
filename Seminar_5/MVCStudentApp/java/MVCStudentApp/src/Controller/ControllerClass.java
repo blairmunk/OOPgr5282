@@ -8,7 +8,9 @@ import Controller.Interfaces.iGetModel;
 import Controller.Interfaces.iGetView;
 import Model.Domain.Student;
 
-
+/**
+  * Контроллер. Поля: используемая модель данных, используемое отображение
+  */
 public class ControllerClass {
     
     private iGetModel model;
@@ -21,6 +23,9 @@ public class ControllerClass {
         this.view = view;
     }
 
+    /**
+    * Проверка на присутствие в списке студентов
+    */
     private boolean testData(List<Student> stud)
     {
         if (stud.size()>0)

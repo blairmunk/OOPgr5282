@@ -11,6 +11,9 @@ import java.util.List;
 import Controller.Interfaces.iGetModel;
 import Model.Domain.Student;
 
+/**
+ * Модель данных для работы с файлом, который содержит список студентов
+ */
 public class ModelClassFile implements iGetModel {
     private String fileName;
 

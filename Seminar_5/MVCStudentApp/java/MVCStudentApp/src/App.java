@@ -14,6 +14,8 @@ import View.ViewClassEng;
 
 public class App {
     public static void main(String[] args) throws Exception {
+
+        // Добавляем студентов
         Student student1 = new Student("Ivan", 20);
         Student student2 = new Student("Vasya", 19);
         Student student3 = new Student("Julia", 23);
@@ -25,6 +27,7 @@ public class App {
         Student student9 = new Student("Katerina", 21);
         Student student10 = new Student("Vladimir", 20);
 
+        // Заполняем список студентами
         List<Student> studList1 = new ArrayList<>();
         studList1.add(student1);
         studList1.add(student2);
@@ -50,11 +53,14 @@ public class App {
         studentMap.put(9, new Student("Семенова", 21));
         studentMap.put(10, new Student("Петренко", 21));
 
+        // Раскомментировать 2 строчки ниже для проверки работы модели ModelClassFile (данные о студентах в файле)
         // iGetModel modelFile = new ModelClassFile("StudentDB.csv");
         // modelFile.saveAllStudentsToFile(studList1);
 
+        // Раскомментировать строчку ниже для проверки работы модели ModelClass (если студенты добавленты в список)
         // iGetModel model = new ModelClass(studList1);
 
+        // Раскомментировать строчку ниже для проверки работы модели ModelClassHash (данные о студентах в HashMap)
         iGetModel modelHash = new ModelClassHash(studentMap);
         
         iGetView view = new ViewClassEng();
