@@ -4,7 +4,7 @@
 
 # Задание к семинару №6 (SOLID)
 
-1. Переписать код в соответствии с _Single Responsibility Principle_. Исходный код задания (task_SRP.txt) и переписанный код располагаются в директории _java/SRP/_ или _python/SRP_ (для java и pyhton соответственно).
+1. (**Готово**)Переписать код в соответствии с _Single Responsibility Principle_. Исходный код задания (task_SRP.txt) и переписанный код располагаются в директории _java/SRP/_ или _python/SRP_ (для java и pyhton соответственно).
 
 2. Переписать код `SpeedCalculation` в соответствии с _Open-Closed Principle_. Код располагается аналогично в директории _…/OCP_.
 
