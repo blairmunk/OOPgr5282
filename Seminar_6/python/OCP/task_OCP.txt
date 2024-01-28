@@ -19,4 +19,5 @@ class Vehicle:
     def get_type(self):
         return self.type
 
-# Подсказка: создайте два дополнительных класса Car и Bus(наследников Vehicle), напишите метод calculateAllowedSpeed(). Использование этого метода позволит сделать класс SpeedCalculation соответствующим OCP
+# Подсказка: создайте два дополнительных класса Car и Bus(наследников Vehicle), напишите метод calculateAllowedSpeed(). 
+# Использование этого метода позволит сделать класс SpeedCalculation соответствующим OCP
