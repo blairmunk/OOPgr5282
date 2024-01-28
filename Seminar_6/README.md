@@ -8,7 +8,7 @@
 
 2. (**Готово**) Переписать код `SpeedCalculation` в соответствии с _Open-Closed Principle_. Код располагается аналогично в директории _…/OCP_.
 
-3. Переписать код в соответствии с _Interface Segregation Principle_. См. аналогично директорию _…/ISP_.
+3. (**Готово**) Переписать код в соответствии с _Interface Segregation Principle_. См. аналогично директорию _…/ISP_.
 
 4. Переписать код в соответствии с _Liskov Substitution Principle_. См. аналогично директорию _…/LSP_.
 
