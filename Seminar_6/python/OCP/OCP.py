@@ -1,4 +1,5 @@
 # Созданы два новых класса Car и Bus, наследники Vehicle. Поле type больше не нужно, убрал.
+
 class SpeedCalculation:
     def calculate_allowed_speed(self, vehicle):
         return vehicle.calculate_allowed_speed()
