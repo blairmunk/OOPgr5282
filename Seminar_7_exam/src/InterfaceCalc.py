@@ -1,11 +1,11 @@
 from abc import ABC, abstractmethod
 
 class InterfaceCalc(ABC):
-    
-    @abstractmethod
-    def input_number():
-        pass
-    
+    '''
+    Интерфейс для калькулятора. 
+    Заложены функции сложения, вычитания, умножения и деления
+    '''
+
     @abstractmethod
     def addition():
         pass

@@ -3,7 +3,7 @@ class ComplexNumber:
     '''
     Этот класс для комплексных чисел.
     '''
-    def __init__(self):
+    def __init__(self,real,imagine):
         self.real = 0
         self.imagine = 0
 
@@ -32,8 +32,6 @@ class ComplexNumber:
     def get_complex(self):
         return (f'{self.real} {ComplexNumber.get_imag_part(self)}').rstrip()
 
-compl1 = ComplexNumber()
-compl1.set_imagine('-10i')
-print(compl1.get_complex())
+
     
     
