@@ -5,7 +5,13 @@ from ComplexNumber import ComplexNumber
 #TODO: Вопрос. Как лучше сделать? Передать в калькулятор комплексное число, или его коэффициенты. И что возвращать?
 
 class ComplexCalc(InterfaceCalc):
-    def __init__(self,x1,y1,x2,y2):
+    def __init__(self):
+        self.x1 = 0
+        self.y1 = 0
+        self.x2 = 0
+        self.y2 = 0
+
+    def get_args(self,x1,y1,x2,y2):
         self.x1 = x1
         self.y1 = y1
         self.x2 = x2

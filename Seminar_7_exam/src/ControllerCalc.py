@@ -4,8 +4,9 @@ from ComplexCalc import ComplexCalc
 from ViewCalc import ViewCalc
 
 class ControllerCalc:
-    def __init__(self,view):
+    def __init__(self,view,calculator):
         self.view = view
+        self.calc = calculator
 
     def check_num(self,num):
         try:
@@ -27,7 +28,7 @@ class ControllerCalc:
             b.set_real(int(self.view.prompt_input("Действительная часть второго числа: ")))  
             b.set_imagine(self.view.prompt_input("Мнимая часть второго числа: "))
 
-            calc = ComplexCalc(a.get_real(), a.get_imag_coef(), b.get_real(), b.get_imag_coef())
+            self.calc.get_args(a.get_real(), a.get_imag_coef(), b.get_real(), b.get_imag_coef())
 
             while True:
                 print("Поддерживаемые операции:")
@@ -37,23 +38,23 @@ class ControllerCalc:
                 print("4. Деление")
                 decision = self.view.prompt_input("Введите номер желаемой операции: ")
                 if decision == '1':
-                    x,y = calc.addition()
+                    x,y = self.calc.addition()
                     self.view.print_result(ComplexNumber(x,y))
                     break
                 elif decision == '2':
-                    x,y = calc.substraction()
+                    x,y = self.calc.substraction()
                     self.view.print_result(ComplexNumber(x,y))
                     break
                 elif decision == '3':
-                    x,y = calc.multiplication()
+                    x,y = self.calc.multiplication()
                     self.view.print_result(ComplexNumber(x,y))
                     break
                 elif decision == '4':
-                    x,y = calc.division()
+                    x,y = self.calc.division()
                     self.view.print_result(ComplexNumber(x,y))
                     break
                 else: 
-                    print("Введите корректный номер операции (от 1 до 4)")
+                    print("Введите корректный номер операции (от 1 до 4)\n")
                     continue
             
             self.view.prompt_msg("Посчитать еще? (д/н)")
