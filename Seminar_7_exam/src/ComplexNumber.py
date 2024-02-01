@@ -4,8 +4,8 @@ class ComplexNumber:
     Этот класс для комплексных чисел.
     '''
     def __init__(self,real,imagine):
-        self.real = 0
-        self.imagine = 0
+        self.real = real
+        self.imagine = imagine
 
     def get_real(self):
         return self.real
@@ -29,7 +29,7 @@ class ComplexNumber:
         else: return ""
 
     # Возвращает строчку с комплексным числом вида x + yi
-    def get_complex(self):
+    def get_number(self):
         return (f'{self.real} {ComplexNumber.get_imag_part(self)}').rstrip()
 
 
